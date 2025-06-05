@@ -34,7 +34,7 @@ $(document).ready(function () {
                 if (!page4Visited) {
                     page4Visited = true;
 
-                    $(".fade-in").removeClass("show").text("");
+                    //$(".fade-in").removeClass("show").text("");
 
                     setTimeout(() => {
                         $("#line1").text("강아지별은 아주 멋진 곳이래.").addClass("show");
@@ -57,7 +57,7 @@ $(document).ready(function () {
                 if (!page5Visited) {
                     page5Visited = true;
 
-                    $(".fade-in").removeClass("show").text("");
+                    //$(".fade-in").removeClass("show").text("");
 
                     setTimeout(() => {
                         $("#line6").text("하지만 우주에선").addClass("show");
@@ -80,7 +80,7 @@ $(document).ready(function () {
                 if (!page6Visited) {
                     page6Visited = true;
 
-                    $(".fade-in").removeClass("show").text("");
+                    //$(".fade-in").removeClass("show").text("");
 
                     setTimeout(() => {
                         $("#line11")
