@@ -88,18 +88,15 @@ ul, li {
 }
 .text {
   font-size: 20px;
-  /* width: 100%; */
-  /* height: 100%; */
   box-sizing: border-box;
   padding: 0;
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  justify-content: center;
+  margin-top: 42%;
 }
 .fade-in {
   opacity: 0;

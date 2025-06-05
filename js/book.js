@@ -10,7 +10,11 @@ $(document).ready(function () {
             gradients: true
         });
 
+
+
         // 페이지 넘김 감지
+
+        let page4Visited = false;
         function updateFlipbookCentering(page) {
             const lastPage = $("#flipbook").turn("pages");
 
@@ -23,29 +27,28 @@ $(document).ready(function () {
                 $("#flipbook .page video").addClass("on");
                 console.log("비디오 페이지 (3페이지) - 가운데 정렬 OFF");
             } else if (page === 4) {
-                // 초기화: 클래스 제거
-                $(".fade-in").removeClass("show").text("");
+                // ⭐ 처음 1회만 실행되도록 조건 추가
+                    if (!page4Visited) {
+                        page4Visited = true;
 
-                // 한 문장씩 텍스트 넣고 show 클래스 붙이기
-                setTimeout(() => {
-                $("#line1").text("하지만 우주에선").addClass("show");
-                }, 500);
+                        $(".fade-in").removeClass("show").text("");
 
-                setTimeout(() => {
-                $("#line2").text("모든게 가벼워 진다는데").addClass("show");
-                }, 1500);
-
-                setTimeout(() => {
-                $("#line3").text("내 작은 친구가").addClass("show");
-                }, 2500);
-
-                setTimeout(() => {
-                $("#line4").text("민들레 홀씨처럼 날아가 버릴까").addClass("show");
-                }, 3500);
-
-                setTimeout(() => {
-                $("#line5").text("걱정이 되었어.").addClass("show");
-                }, 4500);
+                        setTimeout(() => {
+                            $("#line1").text("하지만 우주에선").addClass("show");
+                        }, 500);
+                        setTimeout(() => {
+                            $("#line2").text("모든게 가벼워 진다는데").addClass("show");
+                        }, 1500);
+                        setTimeout(() => {
+                            $("#line3").text("내 작은 친구가").addClass("show");
+                        }, 2500);
+                        setTimeout(() => {
+                            $("#line4").text("민들레 홀씨처럼 날아가 버릴까").addClass("show");
+                        }, 3500);
+                        setTimeout(() => {
+                            $("#line5").text("걱정이 되었어.").addClass("show");
+                        }, 4500);
+                    }
 
             } else if (page === lastPage) {
                 $("#flipbook").removeClass("on").addClass("off");
