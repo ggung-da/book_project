@@ -26,23 +26,27 @@ $(document).ready(function () {
                 // 초기화: 클래스 제거
                 $(".fade-in").removeClass("show").text("");
 
-                // 첫 문장
-                $("#line1").text("어느 날 내 친구 디디가 강아지별로 떠났어.");
-                setTimeout(function () {
-                    $("#line1").addClass("show");
-                }, 100); // 살짝 지연을 줘야 transition이 먹힘
+                // 한 문장씩 텍스트 넣고 show 클래스 붙이기
+                setTimeout(() => {
+                $("#line1").text("하지만 우주에선").addClass("show");
+                }, 500);
 
-                // 두 번째 문장
-                setTimeout(function () {
-                    $("#line2").text("엄마 아빠는 그곳이 얼마나 좋은 곳인지");
-                    $("#line2").addClass("show");
+                setTimeout(() => {
+                $("#line2").text("모든게 가벼워 진다는데").addClass("show");
                 }, 1500);
 
-                // 세 번째 문장
-                setTimeout(function () {
-                    $("#line3").text("얼마나 행복한 곳인지 설명해 주었지만");
-                    $("#line3").addClass("show");
-                }, 3000);
+                setTimeout(() => {
+                $("#line3").text("내 작은 친구가").addClass("show");
+                }, 2500);
+
+                setTimeout(() => {
+                $("#line4").text("민들레 홀씨처럼 날아가 버릴까").addClass("show");
+                }, 3500);
+
+                setTimeout(() => {
+                $("#line5").text("걱정이 되었어.").addClass("show");
+                }, 4500);
+
             } else if (page === lastPage) {
                 $("#flipbook").removeClass("on").addClass("off");
                 $("#flipbook .page video").addClass("on");
