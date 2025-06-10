@@ -47,7 +47,7 @@ $(document).ready(function () {
                         $("#line1").text("강아지별은 아주 멋진 곳이래.").addClass("show");
                     }, 100);
                     setTimeout(() => {
-                        $("#line2").text("디디가 좋아하는 풀입과").addClass("show");
+                        $("#line2").text("디디가 좋아하는 풀잎과").addClass("show");
                     }, 1500);
                     setTimeout(() => {
                         $("#line3").text("부드러운 바람,").addClass("show");
