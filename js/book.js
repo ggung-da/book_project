@@ -45,7 +45,7 @@ $(document).ready(function () {
                     <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
                         <source src="${updatedVideoSrc}" type="video/mp4" />
                     </video>
-                `);
+                `).addClass("on");
                  
             } else if (page === 4) {
                 if (!page4Visited) {
@@ -71,7 +71,7 @@ $(document).ready(function () {
                     <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
                         <source src="${updatedVideo1Src}" type="video/mp4" />
                     </video>
-                `);
+                `).addClass("on");
             } else if (page === 6) {
                 if (!page6Visited) {
                     page6Visited = true;
@@ -96,7 +96,7 @@ $(document).ready(function () {
                     <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
                         <source src="${updatedVideo2Src}" type="video/mp4" />
                     </video>
-                `);
+                `).addClass("on");
             } else if (page === 8) {
                 let updatedSrc = "./img/butterfly.gif?" + new Date().getTime();
                 if (!page8Visited1) {
@@ -116,7 +116,7 @@ $(document).ready(function () {
                     <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
                         <source src="${updatedVideo3Src}" type="video/mp4" />
                     </video>
-                `);
+                `).addClass("on");
             } else if (page === 10) {
                 if (!page10Visited) {
                     page10Visited = true;
@@ -138,7 +138,7 @@ $(document).ready(function () {
                     <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
                         <source src="${updatedVideo4Src}" type="video/mp4" />
                     </video>
-                `);   
+                `).addClass("on");
             } else if (page === 12) {
                 if (!page12Visited) {
                     page12Visited = true;
@@ -160,7 +160,7 @@ $(document).ready(function () {
                     <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
                         <source src="${updatedVideo5Src}" type="video/mp4" />
                     </video>
-                `); 
+                `).addClass("on");
             } else if (page === 14) {
                 if (!page13Visited) {
                     page13Visited = true;
@@ -182,7 +182,7 @@ $(document).ready(function () {
                     <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
                         <source src="${updatedVideo6Src}" type="video/mp4" />
                     </video>
-                `);       
+                `).addClass("on");   
             } else if (page === 16) {
                 if (!page17Visited) {
                     page17Visited = true;
@@ -193,7 +193,7 @@ $(document).ready(function () {
                         $("#line27").text("우리는 꼭 다시 만날거야.").addClass("show");
                     }, 1500);
                 }  
-                          
+
             } else if (page === lastPage) {
                 $("#flipbook").addClass("off").removeClass("on");
             } else {
@@ -202,12 +202,12 @@ $(document).ready(function () {
             }
 
             // 현재 페이지 비디오 재생 시도
-            const video = $("#flipbook .page").eq(page - 1).find("video").get(0);
-            if (video) {
-                video.play().catch((e) => {
-                    console.log("비디오 자동재생 실패:", e);
-                });
-            }
+            // const video = $("#flipbook .page").eq(page - 1).find("video").get(0);
+            // if (video) {
+            //     video.play().catch((e) => {
+            //         console.log("비디오 자동재생 실패:", e);
+            //     });
+            // }
         }
 
         // 초기 상태 업데이트
@@ -226,8 +226,8 @@ $(document).ready(function () {
         $("#reset").click(function () {
             $("#flipbook").turn("page", 1);
             $("#flipbook").addClass("on").removeClass("off");
-            $("#flipbook .page video").removeClass("on");
-            clearAllText();
+           // $("#flipbook .page video").removeClass("on");
+           // clearAllText();
         });
 
         $("#next").click(function () {

@@ -56,20 +56,20 @@ ul, li {
   font-size: 18px;
 }
 
-#flipbook .page video {
-  width: 1280px;
-  height: 720px;
+#flipbook .page .video {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   /* display: none; */
-  /* opacity: 0; */
-  transition: .3s;
+  opacity: 0; 
+  transition: opacity 1s ease-in-out;
 }
 
-#flipbook .page video.on {
+#flipbook .page .video.on {
   /* display: block; */
   /* position: fixed; */
   left: 0;
-  /* opacity: 1; */
+  opacity: 1; 
 }
 
 #flipbook .page,
@@ -113,10 +113,10 @@ ul, li {
     opacity: 1;
 }
 .controls {
-  margin-top: 20px;
+  margin-top: 26px;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 6px;
 }
 
 .controls button {
