@@ -9,7 +9,7 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
-  background-color: #ccc;
+  background-color: #f8efff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,7 +61,7 @@ ul, li {
   height: 720px;
   object-fit: cover;
   /* display: none; */
-  opacity: 0;
+  /* opacity: 0; */
   transition: .3s;
 }
 
@@ -69,7 +69,7 @@ ul, li {
   /* display: block; */
   /* position: fixed; */
   left: 0;
-  opacity: 1;
+  /* opacity: 1; */
 }
 
 #flipbook .page,
@@ -98,24 +98,39 @@ ul, li {
   justify-content: center;
   margin-top: 42%;
 }
+.text2 {
+  margin-top: 52%;
+}
+.text4 {
+  margin-top: 45%;
+}
 .fade-in {
-  opacity: 0;
-  transition: opacity 1s ease-in;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 .fade-in.show {
-  opacity: 1;
+    opacity: 1;
 }
 .controls {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .controls button {
-  padding: 10px 20px;
-  font-size: 16px;
+  /* padding: 10px 20px; */
+  /* font-size: 16px; */
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-.main_page {
+.main_page, .end_page {
   background: #000;
 }
 
