@@ -8,33 +8,38 @@ $(document).ready(function () {
             acceleration: true,
             elevation: 70,
             gradients: true,
+
         });
 
-        let page4Visited = false;
-        let page6Visited = false;
-        let page8Visited1 = false;
-        let page10Visited = false;
-        let page12Visited = false;
-        let page13Visited = false;
-        let page17Visited = false;
 
         function clearAllText() {
             $(".fade-in").text("").removeClass("show");
         }
 
         function updateFlipbookCentering(page) {
-            const lastPage = $("#flipbook").turn("pages");
+        const lastPage = $("#flipbook").turn("pages");
+
+        //clearAllText();
+
+        // 방문 기록 초기화(필요에 따라)
+        if (page !== 4) page4Visited = false;
+        if (page !== 6) page6Visited = false;
+        if (page !== 8) page8Visited1 = false;
+        if (page !== 10) page10Visited = false;
+        if (page !== 12) page12Visited = false;
+        if (page !== 14) page13Visited = false;
+        if (page !== 16) page17Visited = false;
 
             // 텍스트 초기화
-            clearAllText();
+           //clearAllText();
 
             if (page === 1) {
                 $("#flipbook").addClass("on").removeClass("off");
-                $("#flipbook .page video").removeClass("on");
+                //$("#flipbook .page video").removeClass("on");
                 console.log("첫 페이지 - 가운데 정렬 ON (class 'on' 추가)");
             } else if (page === 3) {
                 $("#flipbook").removeClass("on off");
-                $("#flipbook .page video").addClass("on");
+               // $("#flipbook .page video").addClass("on");
                 console.log("비디오 페이지 (3페이지) - 가운데 정렬 OFF");
             } else if (page === 4) {
                 if (!page4Visited) {
