@@ -18,8 +18,15 @@ $(document).ready(function () {
         let page13Visited = false;
         let page17Visited = false;
 
+        function clearAllText() {
+            $(".fade-in").text("").removeClass("show");
+        }
+
         function updateFlipbookCentering(page) {
             const lastPage = $("#flipbook").turn("pages");
+
+            // 텍스트 초기화
+            clearAllText();
 
             if (page === 1) {
                 $("#flipbook").addClass("on").removeClass("off");
@@ -171,6 +178,7 @@ $(document).ready(function () {
             $("#flipbook").turn("page", 1);
             $("#flipbook").addClass("on").removeClass("off");
             $("#flipbook .page video").removeClass("on");
+            clearAllText();
         });
 
         $("#next").click(function () {
@@ -180,3 +188,4 @@ $(document).ready(function () {
         console.error("플립북 초기화 중 오류:", error);
     }
 });
+
