@@ -19,19 +19,18 @@ $(document).ready(function () {
         function updateFlipbookCentering(page) {
         const lastPage = $("#flipbook").turn("pages");
 
-        //clearAllText();
+            //clearAllText();
 
-        // 방문 기록 초기화(필요에 따라)
-        if (page !== 4) page4Visited = false;
-        if (page !== 6) page6Visited = false;
-        if (page !== 8) page8Visited1 = false;
-        if (page !== 10) page10Visited = false;
-        if (page !== 12) page12Visited = false;
-        if (page !== 14) page13Visited = false;
-        if (page !== 16) page17Visited = false;
+            // 방문 기록 초기화(필요에 따라)
+            if (page !== 4) page4Visited = false;
+            if (page !== 6) page6Visited = false;
+            if (page !== 8) page8Visited1 = false;
+            if (page !== 10) page10Visited = false;
+            if (page !== 12) page12Visited = false;
+            if (page !== 14) page13Visited = false;
+            if (page !== 16) page17Visited = false;
 
-            // 텍스트 초기화
-           //clearAllText();
+
 
             if (page === 1) {
                 $("#flipbook").addClass("on").removeClass("off");
