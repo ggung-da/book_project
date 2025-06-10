@@ -82,7 +82,7 @@ $(document).ready(function () {
                 if (!page8Visited1) {
                     page8Visited1 = true;
                     setTimeout(() => {
-                        $("#line11").html('<img src="/img/KakaoTalk_20250610_143915769.gif" alt="강아지별 이미지" width="80">').addClass("show");
+                        $("#line11").html('<img src="/img/butterfly.gif" alt="강아지별 이미지" width="80">').addClass("show");
                     }, 100);
                     setTimeout(() => {
                         $("#line12").text("그때, 작은 나비 한 마리가").addClass("show");
