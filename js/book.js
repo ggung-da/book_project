@@ -40,15 +40,14 @@ $(document).ready(function () {
                 $("#flipbook").removeClass("on off");
                // $("#flipbook .page video").addClass("on");
                 console.log("비디오 페이지 (3페이지) - 가운데 정렬 OFF");
-            } else if (page === 3) {
-                let updatedVideo1Src = "./img/cover.mp4?" + new Date().getTime();
-                $("#video1").html(`
+                let updatedVideoSrc = "./img/cover.mp4?" + new Date().getTime();
+                $("#video0").html(`
                     <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="${updatedVideo1Src}" type="video/mp4" />
+                        <source src="${updatedVideoSrc}" type="video/mp4" />
                     </video>
                 `);
-                console.log ("나오니?");
-                } else if (page === 4) {
+                 
+            } else if (page === 4) {
                 if (!page4Visited) {
                     page4Visited = true;
                     setTimeout(() => {
@@ -67,6 +66,12 @@ $(document).ready(function () {
                         $("#line5").text("어디든 땅을 파도 혼나지 않아.").addClass("show");
                     }, 4500);
                 }
+                let updatedVideo1Src = "./img/page1.mp4?" + new Date().getTime();
+                $("#video1").html(`
+                    <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="${updatedVideo1Src}" type="video/mp4" />
+                    </video>
+                `);
             } else if (page === 6) {
                 if (!page6Visited) {
                     page6Visited = true;
@@ -86,6 +91,12 @@ $(document).ready(function () {
                         $("#line10").text("겁이나는 걸.").addClass("show");
                     }, 4500);
                 }
+                let updatedVideo2Src = "./img/page2.mp4?" + new Date().getTime();
+                $("#video2").html(`
+                    <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="${updatedVideo2Src}" type="video/mp4" />
+                    </video>
+                `);
             } else if (page === 8) {
                 let updatedSrc = "./img/butterfly.gif?" + new Date().getTime();
                 if (!page8Visited1) {
@@ -100,6 +111,12 @@ $(document).ready(function () {
                         $("#line13").text("어둠 속에서 나타났어.").addClass("show");
                     }, 2500);
                 }
+                let updatedVideo3Src = "./img/page3.mp4?" + new Date().getTime();
+                $("#video3").html(`
+                    <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="${updatedVideo3Src}" type="video/mp4" />
+                    </video>
+                `);
             } else if (page === 10) {
                 if (!page10Visited) {
                     page10Visited = true;
@@ -115,7 +132,13 @@ $(document).ready(function () {
                     setTimeout(() => {
                         $("#line17").text("나의 디디가 있었어!").addClass("show");
                     }, 3500);
-                }    
+                } 
+                let updatedVideo4Src = "./img/page4.mp4?" + new Date().getTime();
+                $("#video4").html(`
+                    <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="${updatedVideo4Src}" type="video/mp4" />
+                    </video>
+                `);   
             } else if (page === 12) {
                 if (!page12Visited) {
                     page12Visited = true;
@@ -132,6 +155,12 @@ $(document).ready(function () {
                         $("#line21").text("좋은 냄세가 가득했지!").addClass("show");
                     }, 3500);
                 }  
+                let updatedVideo5Src = "./img/page5.mp4?" + new Date().getTime();
+                $("#video5").html(`
+                    <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="${updatedVideo5Src}" type="video/mp4" />
+                    </video>
+                `); 
             } else if (page === 14) {
                 if (!page13Visited) {
                     page13Visited = true;
@@ -147,7 +176,13 @@ $(document).ready(function () {
                     setTimeout(() => {
                         $("#line25").text("디디를 꼭 안아 주었어.").addClass("show");
                     }, 3500);
-                }       
+                } 
+                let updatedVideo6Src = "./img/page6.mp4?" + new Date().getTime();
+                $("#video6").html(`
+                    <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="${updatedVideo6Src}" type="video/mp4" />
+                    </video>
+                `);       
             } else if (page === 16) {
                 if (!page17Visited) {
                     page17Visited = true;
@@ -157,7 +192,8 @@ $(document).ready(function () {
                     setTimeout(() => {
                         $("#line27").text("우리는 꼭 다시 만날거야.").addClass("show");
                     }, 1500);
-                }            
+                }  
+                          
             } else if (page === lastPage) {
                 $("#flipbook").addClass("off").removeClass("on");
             } else {
