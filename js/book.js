@@ -36,11 +36,19 @@ $(document).ready(function () {
                 $("#flipbook").addClass("on").removeClass("off");
                 //$("#flipbook .page video").removeClass("on");
                 console.log("첫 페이지 - 가운데 정렬 ON (class 'on' 추가)");
-            } else if (page === 3) {
+            } else if (page === 2) {
                 $("#flipbook").removeClass("on off");
                // $("#flipbook .page video").addClass("on");
                 console.log("비디오 페이지 (3페이지) - 가운데 정렬 OFF");
-            } else if (page === 4) {
+            } else if (page === 3) {
+                let updatedVideo1Src = "./img/cover.mp4?" + new Date().getTime();
+                $("#video1").html(`
+                    <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="${updatedVideo1Src}" type="video/mp4" />
+                    </video>
+                `);
+                console.log ("나오니?");
+                } else if (page === 4) {
                 if (!page4Visited) {
                     page4Visited = true;
                     setTimeout(() => {
