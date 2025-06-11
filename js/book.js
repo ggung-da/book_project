@@ -53,6 +53,7 @@ $(document).ready(function () {
                // $("#flipbook .page video").addClass("on");
                 console.log("비디오 페이지 (3페이지) - 가운데 정렬 OFF");
                 let updatedVideoSrc = "./img/cover.mp4?" + new Date().getTime();
+                console.log (new Date().getTime());
                 $("#video0").html(`
                     <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
                         <source src="${updatedVideoSrc}" type="video/mp4" />
@@ -213,6 +214,7 @@ $(document).ready(function () {
                 $("#flipbook .page video").addClass("on");
             }
 
+            
             // 현재 페이지 비디오 재생 시도
             // const video = $("#flipbook .page").eq(page - 1).find("video").get(0);
             // if (video) {
@@ -238,9 +240,23 @@ $(document).ready(function () {
         $("#reset").click(function () {
             $("#flipbook").turn("page", 1);
             $("#flipbook").addClass("on").removeClass("off");
-           // $("#flipbook .page video").removeClass("on");
-           // clearAllText();
+
+            // 모든 video에 대해 재생만 초기화 (재삽입 없이 깜빡임 방지)
+            $("#flipbook video").each(function () {
+                try {
+                    this.currentTime = 0; // 시간만 초기화
+                } catch (e) {
+                    console.error("비디오 시간 초기화 중 오류:", e);
+                }
+            });
+
+            // 텍스트도 필요 시 초기화
+            // $(".fade-in").text("").removeClass("show");
+
+            // 페이지별 처리 로직 다시 실행
+            updateFlipbookCentering(1);
         });
+
 
         $("#next").click(function () {
             $("#flipbook").turn("next");
