@@ -10,18 +10,20 @@ $(document).ready(function () {
             gradients: true,
             
         });
-        var playPromise = document.querySelector('audio').play();
+        // var playPromise = document.querySelector('audio').play();
 
-        // In browsers that don’t yet support this functionality,
-        // playPromise won’t be defined.
-        if (playPromise !== undefined) {
-            playPromise.then(function() {
-            // Automatic playback started!
-            }).catch(function(error) {
-            // Automatic playback failed.
-            // Show a UI element to let the user manually start playback.
-            });
-        }
+        // // In browsers that don’t yet support this functionality,
+        // // playPromise won’t be defined.
+        // if (playPromise !== undefined) {
+        //     playPromise.then(function() {
+        //     // Automatic playback started!
+        //     }).catch(function(error) {
+        //     // Automatic playback failed.
+        //     // Show a UI element to let the user manually start playback.
+        //     });
+        // }
+
+
         function clearAllText() {
             $(".fade-in").text("").removeClass("show");
         }
@@ -162,7 +164,7 @@ $(document).ready(function () {
                         $("#line20").text("몸은 아주 가볍고").addClass("show");
                     }, 2500);
                     setTimeout(() => {
-                        $("#line21").text("좋은 냄세가 가득했지!").addClass("show");
+                        $("#line21").text("좋은 냄새가 가득했지!").addClass("show");
                     }, 3500);
                 }  
                 let updatedVideo5Src = "./img/page5.mp4?" + new Date().getTime();
